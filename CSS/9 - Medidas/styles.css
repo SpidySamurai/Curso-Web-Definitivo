@@ -1,0 +1,72 @@
+/*
+Medidas absolutas
+
+El valor o cambia y siempre sera el mismo asi la pag cambie su tama;o
+y son las sig:
+
+mm, cm, in, pc, px
+
+Medidas relativas
+
+Estas medidades heredan el tama;o o se basan
+en algun tama;o que se haya seleccionado, el valor cambiara
+segun la pagina cambia de tama;o.
+
+%, em, rem
+*/
+
+/*
+main {
+    background-color: red;
+    width: 100%; !*Aqui no usando algo abs y haciendolo responsive
+                    evita un posible overflow y fallas de dise;o*!
+    height: 500px;
+}
+
+p {
+    font-size: 16px;
+}
+*/
+/*EM es el tama;o directo que tenga el padre, si el padre tiene fs de 16px
+quiere decir que tomara 16px en adelante y se vuelve relativo
+si queremos un 1.5 em, genrara una regla de 3 con 16px
+main hereda de html los 16px de fuente por defecto en p.
+
+En conclusion rem puede causar problemas cuando tratamos de aplicarlo
+en cadena dado que podria generar desbalances o perdida en la cuenta
+de como es calculado por lo tanto romperia estilos y no es una medida
+tan buena, pero para eso esta rem
+*/
+/*.text-container {
+    font-size: 1.5em;
+}
+
+.text-container div {
+    font-size: 1.5em;
+}*/
+/* REM es una medida que puede ser usada como si usaramos px, esta medida
+siempre tiene como referencia a la estiqueta root, es decir al estilo que
+el navegador da por defecto. por ejemplo 1 rem = 16px
+
+Para no estar ligado a root y hacer el calculo, asi usar rem como px
+se pone el att fs 62.5% a html y 1.6rem, que da un resultado de 16px
+por lo tanto seteamos un calculo por lo que .1 rem = 1px, 1 rem = 10px
+y lo usamos como medida estandar.
+*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 1.6rem
+}
+
+main div {
+    font-size: 1.6rem;
+}

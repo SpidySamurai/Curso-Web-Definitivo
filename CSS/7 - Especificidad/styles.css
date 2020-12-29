@@ -1,0 +1,94 @@
+/*Control del orden al declarar CSS
+1 - Importancia
+2 - Especificidad
+3 - Orden en las fuentes
+
+Si dos declaraciones tienen la misma importancia,
+la especificidad decidira cual aplicar. Si tienen
+la misma especificidad, el orden de las fuentes
+controla el resultado final.
+
+Importancia
+
+1 - Hoja de estilo de agente de usuario (De navegador)
+2 - Declaraciones normales en hojas de estilo autor (Nuestro css)
+3 - Declaraciones importantes en hojas de estilos
+    de autor (utilizar el !important) *Evitar,Mala practica*
+
+Especificidad
+
+1 - !importan
+2 - Inline styles
+3 - #id
+4 - .class
+5 - tag/selectores
+
+La importancia se define de 1 a 5, importante saber que llamar 2 clases
+llega a tener mas importancia que uno de un nivel superior, y asi tener
+mayor nocion.
+
+Al tener un conflicto el navegador toma decisiones en base a la especificidad
+en cascada de 1 a 5, para resolver conflictos
+
+Orden de las fuentes
+
+Es los estilos, las declaraciones al final de un documento
+anularan a las que sucedan antes en caso de conflicto.
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: Serif
+}
+
+/*#page-title {
+    font-family: Arial;
+}*/
+
+.title {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+/*#main-nav*/
+.nav {
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/*#main-nav*/
+.nav li {
+    display: inline-block
+}
+
+/*#main-nav*/
+.nav a {
+    color: white;
+    background-color: #5943ff;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/*En algunos casos dar estilos a un solo
+elemento es una mala practica, no hagas estilos embebidos
+en html, pls.
+
+La forma correcta es generar una clase para dicho elemento
+y darle el estilo que no comparten los demas elementos, en
+este caso los "li"
+
+Una mala practica es generar muchos #id en nuestros estilos
+la forma correcta es generar clases para estas etiquetas.
+*/
+
+/*#main-nav*/
+.nav .blog {  /*Eso genera una mayor importancia mas que el selector de tag*/
+    background-color: red; /*!important;*/
+}

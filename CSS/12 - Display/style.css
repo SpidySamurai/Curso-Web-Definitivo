@@ -1,0 +1,32 @@
+.block-element {
+    background-color: green;
+    padding: 0;
+}
+
+/*div, ul y p son display block por defecto,
+es decir que usara el espacio que este por delante
+de es   ta etiqueta.*/
+
+/*Para el inline el padding/margin tampoco puede tener
+un width o height, solo puede ser horizontal, no vertical.*/
+
+/*li es list item, tiene una forma vertical, y se comporta como
+un espacio block*/
+
+.nav {
+    background-color: peachpuff;
+    padding: 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.nav li {
+    display: inline-block;
+    font-size: 18px;
+    margin: 10px;
+    padding-left: 20px;
+}
+
+/*inline-block es una fusion entre inline y block...
+A este si se le puede agregar un padding y margin
+*/

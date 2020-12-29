@@ -1,0 +1,21 @@
+/* Para realizar calculos internos en cajas
+es util saber que puedes hacer algo de esta forma:
+    width: calc(50% - 20px);
+Esto haria un calculo responsive del contenido.
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Propiedades del seelector universal
+que siempre deben estar dentro de cada CSS*/
+
+main {
+    width: 100%;
+    height: 1000px;
+    border: 10px solid grey;
+    padding: 20px 35px;
+}

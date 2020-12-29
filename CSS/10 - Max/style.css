@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html {
+
+}
+/*Comenta los min en las propiedades
+para ver el desborde, seguido generalas de nuevo
+para ver como el height se vuelve responsive
+y magia!
+*/
+main {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #13a4a4;
+}
+/*Para poder usar max-min width debemos tener un
+width base y en su mayoria este sera en porcentaje
+si el heigh es fijo, esto ocasiona un overflow si
+los elementos contenidos exceden por lo tanto se usa
+min-height para no dejar de crecer hasta cierto punto
+y un max-height para controlar este.*/
+section {
+    width: 80%;
+    min-width: 320px;
+    max-width: 500px;
+    min-height: 500px;
+    margin: 0 auto;
+    background-color: red;
+}
+
+
+

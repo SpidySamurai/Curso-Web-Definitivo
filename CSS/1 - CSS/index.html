@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--La forma mas comun y correcta, es agregar el CSS externo
+    y manejar nuestros estilos de esta forma.-->
+    <style>
+        p {
+            color: blue;
+        }
+    </style>
+    <!--Esto solo son las distintas formas en las que se pueden generar
+    estilos CSS en HTML directamente, es una practica no tan comun y
+    se evita usar al maximo.-->
+</head>
+<body>
+<main>
+    <section>
+        <p style="color: red; font-size: 25px;">Soy un texto</p>
+        <p class="parrafo">Esto es otro parrafo en rojo, con clase</p>
+        <p id="parrafo2">Esto es otro parrafo con id..</p>
+    </section>
+</main>
+</body>
+</html>

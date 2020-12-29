@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+/*.padre {
+    border: 2px black dotted;
+    display: inline-block;
+}
+
+.box {
+    display: inline-block;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+#two {
+    background-color: green;
+    !*position: absolute;*!
+    position: relative;
+    bottom: 15px;
+}*/
+
+/*Por defecto el position de los elementos
+son static, habria que hacer scroll para visualizarlos
+las diferentes propiedades nos otorgan un comportamiento
+distinto, y se usan para diferentes cosas.
+
+con absolute pierde su posicion y lo manipulamos por encima
+con relative conserva su posicion y se puede manipular
+*/
+
+.section {
+}
+
+.title-above {
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    background-color: aqua;
+    border-radius: 5px;
+    border: black solid 1px;
+    text-align: center;
+}
+
+.container {
+    width: 402px;
+    min-height: 400px;
+    padding: 7px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: royalblue;
+    border: gray dotted 1px;
+}
+
+.container p {
+    position: relative;
+    top: 25px;
+}
+

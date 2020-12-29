@@ -1,0 +1,48 @@
+/*Nos permiten combinar multiples selectores
+y crear mayor especificidad, asi evitando el uso de
+!important,id y tener clases multiples para elementos.
+
+
+Hermano adyacente (Adjacent sibling)
+div + p {
+....
+}
+
+Hermano general ( General sibling)
+div ~ p{
+...
+}
+
+Hijo (child)
+div > p {
+...
+}
+
+Descendiente (Descendant)
+div p{
+...
+}
+*/
+
+/*h2 + p { !*Aplicale el estilo a "p" que este cerca de h2 Adj sibling*!
+    color: red;
+}
+
+h2 ~ p { !*Aplicale al estilo "p" que tenga a h2 como Gen sibling*!
+    color: red;
+}
+
+div > p { !*Aplicale el estilo que sea hija directa de div Child*!
+    color: red;
+}*/
+
+div p { /*Aplicale el estilo a todas las etiquetas p de div Descendent*/
+    color: red;
+}
+
+
+
+
+
+
+
