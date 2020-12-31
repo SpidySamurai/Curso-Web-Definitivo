@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #5943ff;
+    --secondary-color: #13a4a4;
+    --header-size: 4rem;
+    --font: 1.8rem;
+}
+/*La forma para declarar una variable en CSS
+es esta, y la forma de llamarlas es con
+var(--nombre-variable);
+*
+
+Esto suma mantenibilidad,legibilidad y escalabilidad
+al proyecto dado que evita confundir tama;os o que
+haya inconsistencia de atributos.
+
+El poder de su uso destaca en proyectos mas grandes
+o reales.
+ */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Nota f-s 62.5 es para usar rem como pixel
+.1 rem = 1px 1rem = 10px*/
+html {
+    font-size: 62.5%;
+}
+
+/*
+Una variable en css es para almacenar un valor
+y evitar codigo repetitivo y reusar valores que
+usamos antes
+*/
+
+header {
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--primary-color);
+}
+
+main {
+    width: 100vw;
+    height: 70vh;
+    font-size: var(--font);
+}
+
+/*
+Si yo quisiera estilar mi h1 con un color, tendria que
+copiar el codigo de este , por ejemplo ponerle un color de fondo
+o el color del texto*/
+h1 {
+    font-size: var(--header-size);
+    background-color: var(--primary-color);
+    color: brown;
+}
+
+footer {
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--secondary-color);
+}

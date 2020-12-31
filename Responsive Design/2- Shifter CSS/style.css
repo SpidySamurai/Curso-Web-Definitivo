@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*
+Layout shifter CSS al igual que mostly fluid
+nos ayudara con el dise;o responsivo de nuestro proyecto
+pero en vez de desplazar nuestros componentes,este patron
+se enfoca en reubicar componentes dentro y fuera de ciertos
+contenedores
+*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c1, .c2, .c3, .c4, .c5 {
+    width: 100%;
+    min-width: 15rem;
+    height: 15rem;
+}
+
+.c1 {
+    background-color: #5943ff;
+}
+
+.c2 {
+    background-color: red;
+}
+
+.c3 {
+    background-color: rebeccapurple;
+}
+
+.c4 {
+    background-color: green;
+    height: auto;
+}
+
+.c5 {
+    background-color: aqua;
+}
+
+@media (min-width: 600px) {
+    .c1 {
+        width: 25%;
+    }
+
+    .c4 {
+        width: 75%;
+    }
+
+    .c5 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 800px) {
+    .container {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .c1 {
+        width: 50%;
+        order: 1;
+    }
+
+    .c4 {
+        width: 100%;
+    }
+
+    .c5 {
+        width: 50%;
+        order: 2;
+    }
+}
+
+

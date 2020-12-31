@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*
+Mostly fluid consiste en tener una vista inicial
+de una sola columna y conforme crece la vista,
+por ejemplo a una tablet vertical se expande, y si
+la posicionamos horizontal se reacomoda, asi tambien
+para la vista de computadora.
+
+Nuestro archivo css se encarga de todas las vistas,
+cuando este detecte un cambio cargaremos un archivo
+distinto para esa vista en particular, por pixel por
+medio de "media query", esto es un responsive design,
+algo mas complejo, profesional y avanzado.
+
+Nuestros proyectos se vuelven multiplataforma, es un enfoque
+mobile-first (gran parte de los proyectos deben ser dise;ados
+para que sean vistos mejor en un celular, mobile-only, es el
+estandar que actualmente se usa en la actualidad.)
+
+Media query funciona mediante ciertos 'breakpoints'
+@media (min-width: #px){
+    sentences...;
+}
+
+Primero generamos el primer layout para movil,
+Tablet vertical-horizontal
+Laptop-Monitor Desktop
+
+Hay dos formas en las que se puede realizar esto, una manera
+es desde nuestro archivo principal, o la mejor practica que
+es generar varios archivos css y llamarlos desde el head (html)
+especificando cuando este sera llamado por nuestro breakpoint.
+
+link:css media="screen and (min-width: #px) "
+*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c1, .c2, .c3, .c4, .c5 {
+    width: 100%;
+    height: 5rem;
+}
+
+.c1 {
+    background-color: #5943ff;
+}
+
+.c2 {
+    background-color: red;
+}
+
+.c3 {
+    background-color: rebeccapurple;
+}
+
+.c4 {
+    background-color: brown;
+}
+
+.c5 {
+    background-color: aqua;
+}
+
+/*
+@media (min-width: 600px) {
+    .c2, .c3, .c4 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 800px) {
+    .container {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .c1 {
+        width: 60%;
+    }
+
+    .c2 {
+        width: 40%;
+    }
+
+    .c3, .c4 {
+        width: 50%;
+    }
+}
+*/

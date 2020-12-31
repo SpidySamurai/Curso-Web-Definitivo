@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+    <!-- <div class="picture">
+         <img src="imgs/large.jpg" alt="imagen responsiva">
+     </div>-->
+    <picture>
+        <source media="(min-width:1300px)" srcset="imgs/large.jpg">
+        <source media="(min-width:1000px)" srcset="imgs/medium.jpg">
+        <img src="imgs/small.jpg" alt="Es una imagen de ejemplo">
+    </picture>
+
+    <!--Para las vistas que tengamos hay que proporcionar el recurso,
+    con media query le decimos con esta etiqueta que cargue una imagen
+    segun el tama;o el orden debe ser como el que esta
+    -large
+    -medium
+    -img small (por defecto orientado a mobile-first
+    -->
+</main>
+</body>
+</html>

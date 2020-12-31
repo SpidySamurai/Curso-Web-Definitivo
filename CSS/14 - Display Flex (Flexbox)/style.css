@@ -15,19 +15,61 @@ body {
 .container {
     border: .3rem solid black;
     display: flex;
+    /*align-items: baseline;  !*Para el ejemplo de flex box*!*/
+    /*height: 50vh;           !*Para el ejemplo de flex box*!*/
+    flex-wrap: wrap;
 }
 
+/*Display flex nos permite generar un dise;o responsive
+mas sencillo y facil de manejar, a comparacion de jugar con
+las propiedades display y position, flex nos permite olvidarnos
+de esto y con el att justify-content podemos hacer que los elementos
+hijos tengan un comportamiento distinto.
+
+space-between genera un espaciado entre los elementos tomando el tama;o de
+la caja contenedora.
+flex-start (por defecto) lo alinea al inicio,
+flex-end al final...
+
+flex-wrap hace que pueda desplazarse el contenido con 'wrap'
+
+alig-items nos permite alineas de varias maneras nuestro cotenido
+
+flex-start al inicio
+flex-end al final
+center centrado responsivo
+stretch se estiran al 100 del contenedor padre
+baseline tomara el espacio del contenido
+
+*/
+
+
+/*
+El order cambia el orden de nuestros contenedores
+pero si no agregamos orden a alguno se mueven a la izquierda
+y los demas se asignan de la forma definida.
+
+flex grow reparte el espacio faltante o que 'sobra'
+cuando esta adquiere su tama;o original pierde esta propiedad
+*/
 .box {
-    width: 10rem;
+    /*width: 10rem;*/ /*Para el ejemplo de flex box*/
     height: 10rem;
+    flex-basis: 10rem;
+    flex-grow: 1;
 }
 
 .box1 {
     background-color: red;
+    /*order: 1;*/
+    /*flex-grow: 1;*/
 }
 
 .box2 {
+
     background-color: #5943ff;
+    /*order: 6;*/
+    /*flex-grow: 1;*/
 }
 
 
@@ -37,6 +79,7 @@ body {
 
 .box4 {
     background-color: aqua;
+    /*order: 2;*/
 }
 
 .box5 {
